@@ -1,0 +1,151 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+section.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 6.375rem 5.625rem;
+    background: linear-gradient(rgba(255, 255, 255, 0.34), rgba(230, 230, 230, 0.463)), url('src/asset/bg.png') center/cover no-repeat;
+    height: 100vh;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 2.0625rem 2.4375rem;
+    border-radius: 0.5rem;
+    background: #FFF;
+    gap: 2.8rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.6875rem 0;
+}
+
+.hero-text h1 {
+    color: black;
+    font-family: 'Bebas Neue', system-ui;
+    font-size: 4.75rem;
+    line-height: normal;
+}
+
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 3.125rem 2.5625rem;
+    border-radius: 0.35rem;
+    background: #000000;
+    gap: 10px;
+}
+
+.hero-cta span {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 3.25rem;
+    font-weight: 900;
+    letter-spacing: -0.065rem;
+}
+
+.hero-cta .cta-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    gap: 26px;
+    font-size: 18px;
+}
+
+.hero-cta .cta-buttons a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem 2.75rem;
+    border-radius: 2.25rem;
+}
+
+.hero-cta .cta-buttons a:first-child {
+    color: #000000;
+    background: #ffffff;
+}
+
+.hero-cta .cta-buttons a:first-child:hover {
+    background: rgba(10, 239, 255, 0.75);
+    color: white;
+}
+
+.hero-cta .cta-buttons a:last-child {
+    background: #212121;
+}
+
+.team-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1.25rem;
+    font-family: 'Poppins', system-ui;
+    font-weight: 900;
+    font-size: 1.2rem;
+    background-color: white;
+}
+
+.lineup-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 4.75rem;
+}
+
+.lineup-title {
+    font-family: 'Bebas Neue', system-ui;
+    font-size: 4.75rem;
+    color: white;
+}
+
+.lineup-svg {
+    position: absolute;
+    bottom: -190px;
+}
+
+.team-member {
+    display: flex;
+    align-items: start;
+    gap: 1.25rem;
+    width: 100%;
+    padding: 16px 20px;
+    margin-bottom: 50px;
+}
+
+.card-img {
+    transition: transform 0.8s ease, border-color 0.3s ease;
+}
+
+.card-inner {
+    transition: border-color 1s ease;
+}
