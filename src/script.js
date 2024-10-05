@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cardData = [
         { name: "Axel", description: "apa aja asal sopan pasti bisa", imgSrc: "src/asset/axel.png", imgSrcAfter: "src/asset/axel_after.png", linkedin: "https://linkedin.com/in/axelldavid", github: "https://github.com/szyxxx", bg: "#4FACB3" },
-        { name: "Farhan", description: "bisaa amann azaa", imgSrc: "src/asset/david.png", imgSrcAfter: "src/asset/david_after.png", linkedin: "https://linkedin.com/in/farhan", github: "https://github.com/farhan", bg: "#4FACB3" },
+        { name: "Farhan", description: "bisaa amann azaa", imgSrc: "src/asset/farhan.png", imgSrcAfter: "src/asset/farhan_after.png", linkedin: "https://www.linkedin.com/in/farhanrizkifauzi/", github: "", bg: "#4FACB3" },
         { name: "Tsani", description: "pengendali eyay", imgSrc: "src/asset/john.png", imgSrcAfter: "src/asset/john_after.png", linkedin: "https://linkedin.com/in/tsani", github: "https://github.com/tsani", bg: "#D3B16C" },
         { name: "Andhin", description: "jurusan MTK bjir", imgSrc: "src/asset/jane.png", imgSrcAfter: "src/asset/jane_after.png", linkedin: "https://linkedin.com/in/andhin", github: "https://github.com/andhin", bg: "#D3B16C" },
         { name: "Risa", description: "jurusan MTK bjir(2)", imgSrc: "src/asset/doe.png", imgSrcAfter: "src/asset/doe_after.png", linkedin: "https://linkedin.com/in/risa", github: "https://github.com/risa", bg: "#D3B16C" },
