@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                 </div>
                 <div class="flex flex-col justify-end items-center gap-2 self-stretch" style="flex: 1 0 0;">
-                    <img src="${card.imgSrc}" alt="" class="card-img" style="max-width: 120%;">
+                    <img src="${card.imgSrc}" alt="" class="card-img">
                 </div>
             </div>
         `;
