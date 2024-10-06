@@ -22,16 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
         cardElement.style.width = '100%';
 
         cardElement.innerHTML = `
-            <div class="flex flex-col py-0 px-7 self-stretch rounded-3xl" style="flex: 1 0 0; background-color: ${card.bg}; border: 2px solid transparent;">
-                <div class="flex h-[13.56rem] pt-5 flex-col justify-between items-center self-stretch text-white text-center" style="font-family:'Poppins', system-ui;">
+            <div class="team-sec flex flex-col py-0 px-0 items-center self-stretch rounded-3xl" style="flex: 1 0 0; background-color: ${card.bg}; border: 2px solid transparent;">
+                <div class="team-content flex h-[13.56rem] pt-5 flex-col justify-between items-center self-stretch text-white text-center" style="font-family:'Poppins', system-ui;">
                     <span style="font-weight: 600; font-size: 1.4rem">${card.name}</span>
-                    <p style="font-weight: 300; font-size: 1rem">${card.description}</p>
+                    <p style="font-weight: 300; font-size: 1rem; width:85%;">${card.description}</p>
                     <div class="flex justify-center items-center gap-2 self-stretch icons">
                         <a href="${card.linkedin}" target="_blank"><img src="src/asset/linkedin.png" alt="LinkedIn"></a>
                         <a href="${card.github}" target="_blank"><img src="src/asset/github.png" alt="GitHub"></a>
                     </div>
                 </div>
-                <div class="flex flex-col justify-end items-center gap-2 self-stretch" style="flex: 1 0 0;">
+                <div class="flex flex-col justify-end items-center gap-2" style="flex: 1 0 0;">
                     <img src="${card.imgSrc}" alt="" class="card-img">
                 </div>
             </div>
