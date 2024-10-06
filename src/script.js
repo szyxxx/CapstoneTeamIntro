@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: "Farhan", description: "bisaa amann azaa", imgSrc: "src/asset/farhan.png", imgSrcAfter: "src/asset/farhan_after.png", linkedin: "https://www.linkedin.com/in/farhanrizkifauzi/", github: "", bg: "#4FACB3", role: "Cloud Computing", univ: "Telkom University" },
         { name: "Tsani", description: "pengendali eyay", imgSrc: "src/asset/tsani.png", imgSrcAfter: "src/asset/tsani_after.png", linkedin: "https://www.linkedin.com/in/m-tsani-faishal-azhar-30846a258/", github: "", bg: "#D3B16C", role: "Machine Learning", univ: "Telkom University" },
         { name: "Andhin", description: "jurusan MTK bjir", imgSrc: "src/asset/andhin.png", imgSrcAfter: "src/asset/andhin_after.png", linkedin: "https://www.linkedin.com/in/andhin-vaniza-zahranie/", github: "", bg: "#D3B16C", role: "Machine Learning", univ: "Universitas Brawijaya" },
-        { name: "Risa", description: "jurusan MTK bjir(2)", imgSrc: "src/asset/febri.png", imgSrcAfter: "src/asset/febri.png", linkedin: "https://www.linkedin.com/in/febrisa-eka-n-patricia-64876b329/", github: "", bg: "#D3B16C", role: "Machine Learning", univ: "Universitas Brawijaya" },
+        { name: "Risa", description: "jurusan MTK bjir(2)", imgSrc: "src/asset/febri.png", imgSrcAfter: "src/asset/febri_after.png", linkedin: "https://www.linkedin.com/in/febrisa-eka-n-patricia-64876b329/", github: "", bg: "#D3B16C", role: "Machine Learning", univ: "Universitas Brawijaya" },
         // { name: "??", description: "", imgSrc: "src/asset/smith.png", imgSrcAfter: "src/asset/smith_after.png", linkedin: "https://linkedin.com/in/unknown", github: "https://github.com/unknown", bg: "#62BE86", role: "Mobile Development", univ: "" },
         // { name: "??", description: "", imgSrc: "src/asset/emily.png", imgSrcAfter: "src/asset/emily_after.png", linkedin: "https://linkedin.com/in/unknown", github: "https://github.com/unknown", bg: "#62BE86", role: "Mobile Development", univ: "" },
     ];
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="${card.github}" target="_blank"><img src="src/asset/github.png" alt="GitHub"></a>
                     </div>
                 </div>
-                <div class="flex flex-col justify-end items-center gap-2" style="flex: 1 0 0; height: 100%;">
+                <div class="flex flex-col justify-end items-center gap-2" style="flex: 1 0 0; height: 50%;">
                     <img src="${card.imgSrc}" alt="" class="card-img">
                 </div>
                 <div class="half-circle" style="background-color: ${darkenedColor};">
