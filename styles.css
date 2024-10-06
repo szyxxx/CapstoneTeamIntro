@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -9,7 +13,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -19,19 +23,31 @@ section.hero {
     align-items: center;
     width: 100%;
     padding: 6.375rem 5.625rem;
-    background: linear-gradient(rgba(255, 255, 255, 0.34), rgba(230, 230, 230, 0.463)), url('src/asset/bg.png') center/cover no-repeat;
+    background: linear-gradient(rgba(255, 255, 255, 0.34), rgba(230, 230, 230, 0.463)), url('src/asset/bg.png') center/cover repeat;
+    animation: animate 10s linear infinite;
     height: 100vh;
+}
+@keyframes animate {
+    0% {
+        background-position: center 0;
+    }
+    90% {
+        background-position: center 500%;
+    }
+    100% {
+        background-position: center 0;
+    }
 }
 
 .hero-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 75%;
     padding: 2.0625rem 2.4375rem;
     border-radius: 0.5rem;
     background: #FFF;
-    gap: 2.8rem;
+    gap: 1.8rem;
 }
 
 .hero-text {
@@ -47,23 +63,22 @@ section.hero {
     color: black;
     font-family: 'Bebas Neue', system-ui;
     font-size: 4.75rem;
-    line-height: normal;
 }
 
 .hero-cta {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     padding: 3.125rem 2.5625rem;
     border-radius: 0.35rem;
-    background: #000000;
+    background: #000;
     gap: 10px;
 }
 
 .hero-cta span {
     color: #fff;
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
     font-size: 3.25rem;
     font-weight: 900;
     letter-spacing: -0.065rem;
@@ -81,15 +96,16 @@ section.hero {
 
 .hero-cta .cta-buttons a {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0.625rem 2.75rem;
     border-radius: 2.25rem;
+    text-align: center;
 }
 
 .hero-cta .cta-buttons a:first-child {
-    color: #000000;
-    background: #ffffff;
+    color: #000;
+    background: #fff;
 }
 
 .hero-cta .cta-buttons a:first-child:hover {
@@ -107,7 +123,7 @@ section.hero {
     align-items: center;
     width: 100%;
     padding: 0 1.25rem;
-    font-family: 'Poppins', system-ui;
+    font-family: 'Poppins', sans-serif;
     font-weight: 900;
     font-size: 1.2rem;
     background-color: white;
@@ -135,7 +151,7 @@ section.hero {
 
 .team-member {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     gap: 1.25rem;
     width: 100%;
     padding: 16px 20px;
@@ -143,13 +159,71 @@ section.hero {
 }
 
 .card-img {
-    max-width: 130px;
+    max-width: 190px;
     transition: transform 0.8s ease, border-color 0.3s ease;
 }
 
 .card-inner {
-    transition: border-color 1s ease;
+    position: relative;
+    transition: transform 0.8s ease, border-color 0.3s ease;
 }
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 3xl;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.card-inner:hover .card-overlay {
+    opacity: 1;
+}
+
+.half-circle {
+    width: 120%;
+    height: 80px;
+    border-radius: 50% 50% 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -50px; /* Initially hidden below the card */
+    left: -10%;
+    transform: translateX(-50%);
+    transition: all 0.3s ease; /* Smooth slide-up effect */
+    z-index: 1;
+    opacity: 0; /* Start invisible */
+}
+
+.half-circle-text {
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.team-sec {
+    position: relative; /* Make sure the card is relative to the half-circle */
+    overflow: hidden; /* Hide overflow so the half-circle is hidden initially */
+}
+
+.team-sec:hover .half-circle {
+    bottom: 0px; /* Bring the half-circle up on hover */
+    opacity: 1;  /* Make it visible */
+}
+
 
 @media (max-width: 1024px) {
     section.hero {

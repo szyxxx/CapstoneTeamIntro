@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cardData = [
-        { name: "Axel", description: "apa aja asal sopan pasti bisa", imgSrc: "src/asset/axel.png", imgSrcAfter: "src/asset/axel_after.png", linkedin: "https://linkedin.com/in/axelldavid", github: "https://github.com/szyxxx", bg: "#4FACB3" },
-        { name: "Farhan", description: "bisaa amann azaa", imgSrc: "src/asset/farhan.png", imgSrcAfter: "src/asset/farhan_after.png", linkedin: "https://www.linkedin.com/in/farhanrizkifauzi/", github: "", bg: "#4FACB3" },
-        { name: "Tsani", description: "pengendali eyay", imgSrc: "src/asset/john.png", imgSrcAfter: "src/asset/john_after.png", linkedin: "https://linkedin.com/in/tsani", github: "https://github.com/tsani", bg: "#D3B16C" },
-        { name: "Andhin", description: "jurusan MTK bjir", imgSrc: "src/asset/jane.png", imgSrcAfter: "src/asset/jane_after.png", linkedin: "https://linkedin.com/in/andhin", github: "https://github.com/andhin", bg: "#D3B16C" },
-        { name: "Risa", description: "jurusan MTK bjir(2)", imgSrc: "src/asset/doe.png", imgSrcAfter: "src/asset/doe_after.png", linkedin: "https://linkedin.com/in/risa", github: "https://github.com/risa", bg: "#D3B16C" },
-        { name: "??", description: "", imgSrc: "src/asset/smith.png", imgSrcAfter: "src/asset/smith_after.png", linkedin: "https://linkedin.com/in/unknown", github: "https://github.com/unknown", bg: "#62BE86" },
-        { name: "??", description: "", imgSrc: "src/asset/emily.png", imgSrcAfter: "src/asset/emily_after.png", linkedin: "https://linkedin.com/in/unknown", github: "https://github.com/unknown", bg: "#62BE86" },
+        { name: "Axel", description: "apa aja asal sopan pasti bisa", imgSrc: "src/asset/axel.png", imgSrcAfter: "src/asset/axel_after.png", linkedin: "https://linkedin.com/in/axelldavid", github: "https://github.com/szyxxx", bg: "#4FACB3", role: "Cloud Computing", univ: "Telkom University" },
+        { name: "Farhan", description: "bisaa amann azaa", imgSrc: "src/asset/farhan.png", imgSrcAfter: "src/asset/farhan_after.png", linkedin: "https://www.linkedin.com/in/farhanrizkifauzi/", github: "", bg: "#4FACB3", role: "Cloud Computing", univ: "Telkom University" },
+        { name: "Tsani", description: "pengendali eyay", imgSrc: "src/asset/tsani.png", imgSrcAfter: "src/asset/tsani_after.png", linkedin: "https://linkedin.com/in/tsani", github: "https://github.com/tsani", bg: "#D3B16C", role: "Machine Learning", univ: "Telkom University" },
+        { name: "Andhin", description: "jurusan MTK bjir", imgSrc: "src/asset/andhin.png", imgSrcAfter: "src/asset/andhin_after.png", linkedin: "https://linkedin.com/in/andhin", github: "https://github.com/andhin", bg: "#D3B16C", role: "Machine Learning", univ: "Universitas Brawijaya" },
+        { name: "Risa", description: "jurusan MTK bjir(2)", imgSrc: "src/asset/febri.png", imgSrcAfter: "src/asset/febri.png", linkedin: "https://linkedin.com/in/risa", github: "https://github.com/risa", bg: "#D3B16C", role: "Machine Learning", univ: "Universitas Brawijaya" },
+        // { name: "??", description: "", imgSrc: "src/asset/smith.png", imgSrcAfter: "src/asset/smith_after.png", linkedin: "https://linkedin.com/in/unknown", github: "https://github.com/unknown", bg: "#62BE86", role: "Mobile Development", univ: "" },
+        // { name: "??", description: "", imgSrc: "src/asset/emily.png", imgSrcAfter: "src/asset/emily_after.png", linkedin: "https://linkedin.com/in/unknown", github: "https://github.com/unknown", bg: "#62BE86", role: "Mobile Development", univ: "" },
     ];
 
     const container = document.querySelector('.team-member');
@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+
     cardData.forEach(card => {
+        const darkenedColor = darkenColor(card.bg, 0.3);
         const cardElement = document.createElement('div');
         cardElement.className = 'flex h-[28.875rem] items-start';
         cardElement.style.flex = '1 0 0';
@@ -31,25 +33,47 @@ document.addEventListener('DOMContentLoaded', () => {
                         <a href="${card.github}" target="_blank"><img src="src/asset/github.png" alt="GitHub"></a>
                     </div>
                 </div>
-                <div class="flex flex-col justify-end items-center gap-2" style="flex: 1 0 0;">
+                <div class="flex flex-col justify-end items-center gap-2" style="flex: 1 0 0; height: 100%;">
                     <img src="${card.imgSrc}" alt="" class="card-img">
+                </div>
+                <div class="half-circle" style="background-color: ${darkenedColor};">
+                    <span class="half-circle-text" style="font-weight: 700; font-size: 16px;">${card.role}</span>
+                    <span class="half-circle-text" style="font-size: 12px; font-style: italic;">${card.univ}</span>
                 </div>
             </div>
         `;
 
-        const cardInner = cardElement.querySelector('.flex.flex-col');
+        const cardInner = cardElement.querySelector('.team-sec');
         const cardImg = cardElement.querySelector('.card-img');
+        const halfCircle = cardElement.querySelector('.half-circle');
 
         cardInner.addEventListener('mouseenter', () => {
             cardImg.src = card.imgSrcAfter;
             cardInner.style.borderColor = 'white';
+            halfCircle.style.transform = 'translateY(0)';
         });
 
         cardInner.addEventListener('mouseleave', () => {
             cardImg.src = card.imgSrc;
             cardInner.style.borderColor = 'transparent';
+            halfCircle.style.transform = 'translateY(150%)';
         });
 
         container.appendChild(cardElement);
     });
 });
+
+function darkenColor(hex, percent) {
+    // Convert hex to RGB
+    let r = parseInt(hex.slice(1, 3), 16);
+    let g = parseInt(hex.slice(3, 5), 16);
+    let b = parseInt(hex.slice(5, 7), 16);
+
+    // Darken each color channel
+    r = Math.floor(r * (1 - percent));
+    g = Math.floor(g * (1 - percent));
+    b = Math.floor(b * (1 - percent));
+
+    // Convert back to hex
+    return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
+}
