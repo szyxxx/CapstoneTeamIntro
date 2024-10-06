@@ -300,7 +300,7 @@ section.hero {
         display: none;
     }
     .hero-content {
-        padding: 20px 10px;
+        padding: 20px 20px;
         flex-direction: column; /* Stack content vertically */
         gap: 1rem; /* Add spacing between content */
     }
