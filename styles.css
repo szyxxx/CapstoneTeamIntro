@@ -200,11 +200,10 @@ section.hero {
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -50px; /* Initially hidden below the card */
-
-    transition: all 0.3s ease; /* Smooth slide-up effect */
+    bottom: -50px;
+    transition: all 0.3s ease;
     z-index: 1;
-    opacity: 0; /* Start invisible */
+    opacity: 0;
 }
 
 .half-circle-text {
@@ -215,7 +214,7 @@ section.hero {
 
 .team-sec {
     position: relative; /* Make sure the card is relative to the half-circle */
-    overflow: hidden; /* Hide overflow so the half-circle is hidden initially */
+    overflow: hidden; 
 }
 
 .team-sec:hover .half-circle {
@@ -353,5 +352,10 @@ section.hero {
     .card-img {
         margin-top: 30px;
         max-width: 160px; /* Ensure images fit within container */
+    }
+    .half-circle {
+        opacity: 1;
+        position: absolute;
+        bottom: 0px;
     }
 }
