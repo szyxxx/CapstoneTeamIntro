@@ -351,11 +351,12 @@ section.hero {
     }
     .card-img {
         margin-top: 30px;
-        max-width: 160px; /* Ensure images fit within container */
+        width: 240px; /* Ensure images fit within container */
     }
     .half-circle {
         opacity: 1;
         position: absolute;
         bottom: 0px;
+        height: 60px;
     }
 }
