@@ -43,7 +43,7 @@ section.hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 75%;
+    width: 100%;
     padding: 2.0625rem 2.4375rem;
     border-radius: 0.5rem;
     background: #FFF;
