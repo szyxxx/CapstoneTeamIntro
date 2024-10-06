@@ -204,7 +204,7 @@ section.hero {
     }
 
     .card-img {
-        max-width: 26%;
+        width: 24%;
     }
 }
 
@@ -263,6 +263,6 @@ section.hero {
     }
 
     .card-img {
-        max-width: 90%; /* Ensure images fit within container */
+        width: 80%; /* Ensure images fit within container */
     }
 }

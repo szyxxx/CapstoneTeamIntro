@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardElement = document.createElement('div');
         cardElement.className = 'flex h-[28.875rem] items-start';
         cardElement.style.flex = '1 0 0';
+        cardElement.style.width = '100%';
 
         cardElement.innerHTML = `
             <div class="flex flex-col py-0 px-7 self-stretch rounded-3xl" style="flex: 1 0 0; background-color: ${card.bg}; border: 2px solid transparent;">
