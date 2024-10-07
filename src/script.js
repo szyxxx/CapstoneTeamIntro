@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${card.imgSrc}" alt="" class="card-img">
                 </div>
                 <div class="half-circle" style="background-color: ${darkenedColor};">
-                    <span class="half-circle-text" style="font-weight: 700; font-size: 18px;">${card.role}</span>
-                    <span class="half-circle-text" style="font-size: 16px; font-style: italic;">${card.univ}</span>
+                    <span class="half-circle-text" style="font-weight: 700; font-size: 16px;">${card.role}</span>
+                    <span class="half-circle-text" style="font-size: 12px; font-style: italic;">${card.univ}</span>
                 </div>
             </div>
         `;
