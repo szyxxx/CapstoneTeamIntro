@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cardData = [
-        { name: "Axel", description: '"Apa aja asal sopan, pasti bisa"', imgSrc: "src/asset/axel.png", imgSrcAfter: "src/asset/axel_after.png", linkedin: "https://linkedin.com/in/axelldavid", github: "https://github.com/szyxxx", bg: "#4FACB3", role: "Cloud Computing", univ: "Telkom University" },
+        { name: "Axel", description: '"apa aja asal sopan, pasti bisa"', imgSrc: "src/asset/axel.png", imgSrcAfter: "src/asset/axel_after.png", linkedin: "https://linkedin.com/in/axelldavid", github: "https://github.com/szyxxx", bg: "#4FACB3", role: "Cloud Computing", univ: "Telkom University" },
         { name: "Farhan", description: '"bisaa amann azaa"', imgSrc: "src/asset/farhan.png", imgSrcAfter: "src/asset/farhan_after.png", linkedin: "https://www.linkedin.com/in/farhanrizkifauzi/", github: "", bg: "#4FACB3", role: "Cloud Computing", univ: "Telkom University" },
         { name: "Tsani", description: '"aku pengendali eyay"', imgSrc: "src/asset/tsani.png", imgSrcAfter: "src/asset/tsani_after.png", linkedin: "https://www.linkedin.com/in/m-tsani-faishal-azhar-30846a258/", github: "", bg: "#D3B16C", role: "Machine Learning", univ: "Telkom University" },
         { name: "Andhin", description: '"respect wok"', imgSrc: "src/asset/andhin.png", imgSrcAfter: "src/asset/andhin_after.png", linkedin: "https://www.linkedin.com/in/andhin-vaniza-zahranie/", github: "", bg: "#D3B16C", role: "Machine Learning", univ: "Universitas Brawijaya" },
@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${card.imgSrc}" alt="" class="card-img">
                 </div>
                 <div class="half-circle" style="background-color: ${darkenedColor};">
-                    <span class="half-circle-text" style="font-weight: 700; font-size: 16px;">${card.role}</span>
-                    <span class="half-circle-text" style="font-size: 12px; font-style: italic;">${card.univ}</span>
+                    <span class="half-circle-text" style="font-weight: 700; font-size: 14px;">${card.role}</span>
+                    <span class="half-circle-text" style="font-size: 10px; font-style: italic;">${card.univ}</span>
                 </div>
             </div>
         `;
