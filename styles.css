@@ -159,7 +159,7 @@ section.hero {
 }
 
 .card-img {
-    width: 70%;
+    width: 90%;
     transition: transform 0.8s ease, border-color 0.3s ease;
 }
 
@@ -179,7 +179,7 @@ section.hero {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease-in-out;
     border-radius: 3xl;
     font-family: 'Poppins', sans-serif;
